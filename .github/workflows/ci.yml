@@ -11,5 +11,8 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a single command
+      - name: Run install yarn
+        run: yarn install
+      # Runs a single command
       - name: Run Linter
         run: yarn lint
