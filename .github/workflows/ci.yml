@@ -1,24 +1,16 @@
-name: "CI (Integração Continua): Primeira Action"
+name: "CI (Integração Continua): Main workflow"
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  # ativa esse fluxo de trabalho para cada push ou pull que acontecer apontando para a branch main
-  push:
-    branches: ["main"]
   pull_request:
     types: [opened, synchronize]
 
-# definindo o que queremos executar
 jobs:
-  exemplo: # job exemplo
+  linter:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      # Runs a single command using the runners shell
+     steps:
+        - uses: actions/checkout@v3
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+        # Runs a single command 
+        - name: Run Linter
+          run: yarn lint
 
-      # Runs a lis files command
-      - name: Run a one-line script
-        run: ls -la
