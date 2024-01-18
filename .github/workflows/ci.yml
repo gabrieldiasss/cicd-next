@@ -1,4 +1,4 @@
-name: "CI (Integração Continua): Main worflow"
+name: "CI (Integração Continua): Main workflow"
 
 on:
   pull_request:
@@ -8,8 +8,8 @@ jobs:
   linter:
     runs-on: ubuntu-latest
      steps:
-      - uses: actions/checkout@v3
-      
-      # Runs a single command 
-      - name: Run Linter
-        run: yarn lint
+        - uses: actions/checkout@v3
+
+        # Runs a single command 
+        - name: Run Linter
+          run: yarn lint
