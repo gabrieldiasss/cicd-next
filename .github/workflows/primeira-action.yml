@@ -6,7 +6,7 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    branches: [opened, synchronize]
+    types: [opened, synchronize]
 
 # definindo o que queremos executar
 jobs:
