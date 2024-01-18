@@ -18,3 +18,7 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+      # Runs a lis files command
+      - name: Run a one-line script
+        run: ls -la
