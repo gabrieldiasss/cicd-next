@@ -6,7 +6,7 @@ on:
   push:
     branches: ["main"]
   pull_request:
-    branches: ["main"]
+    types: [opened, synchronize]
 
 # definindo o que queremos executar
 jobs:
@@ -18,3 +18,7 @@ jobs:
 
       - name: Run a one-line script
         run: echo Hello, world!
+
+      # Runs a lis files command
+      - name: Run a one-line script
+        run: ls -la
